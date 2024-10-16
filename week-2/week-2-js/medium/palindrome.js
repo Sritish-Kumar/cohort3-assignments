@@ -4,7 +4,33 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let i = 0;
+  let j = str.length - 1;
+
+  while (i < j) {
+    if ([",", " ", "?", "!", "."].includes(str.charAt(i))) {
+      i++;
+      continue;
+    } else if ([",", " ", "?", "!", "."].includes(str.charAt(j))) {
+      j--;
+      continue;
+    }
+    if (str.toLowerCase().charAt(i) !== str.toLowerCase().charAt(j)) {
+      break;
+    }
+    i++;
+    j--;
+  }
+
+  if (i == j) {
+    return true;
+  } else if (i > j) {
+    return true;
+  }
+
+  return false;
 }
+
+// console.log(isPalindrome("r a ce,   ca r"));
 
 module.exports = isPalindrome;
