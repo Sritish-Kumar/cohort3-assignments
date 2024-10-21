@@ -1,6 +1,17 @@
 // a clock which shows the live time - HH:MM::SS (Eg. 13:45:23)
 
-const startTime = new Date().toTimeString();
+// const startTime = new Date().toTimeString();
+
+//Indian Time
+let date = new Date();
+let options = {
+  timeZone: "Asia/Kolkata",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false, // Ensure 24-hour format
+};
+let startTime = new Intl.DateTimeFormat("en-US", options).format(date);
 
 const startHour = Number(startTime.substring(0, 2));
 const startMin = Number(startTime.substring(3, 5));
