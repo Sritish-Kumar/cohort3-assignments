@@ -1,0 +1,74 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  padding: 17px 20px;
+  max-width: 900px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* Button styles */
+.color {
+  flex: 1; /* Allow buttons to share available space equally */
+  margin: 0 5px; /* Add some space between buttons */
+  height: 50px;
+  border-radius: 20px;
+  font-size: 21px;
+  font-family: monospace;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+
+/* Color classes */
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.black {
+  background-color: black;
+}
+.purple {
+  background-color: purple;
+}
+.blue {
+  background-color: blue;
+}
+.white {
+  background-color: white;
+}
+.default {
+  background-color: #ff5733;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .color {
+    font-size: 18px; /* Smaller font size for smaller screens */
+    height: 40px; /* Adjust button height */
+  }
+
+  div {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    margin-bottom: 20px; /* Reduce margin */
+  }
+}
