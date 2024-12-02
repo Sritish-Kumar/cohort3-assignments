@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-1 col">
+        <h2>Form Builder</h2>
+        <form action="build" id="myForm">
+          <label for="input"> Select a input field </label>
+          <select id="input" required name="field">
+            <option value="" disabled selected>Select a field</option>
+            <option value="text">Text Input</option>
+            <option value="password">Password</option>
+            <option value="email">Email</option>
+            <option value="radio">Radio</option>
+            <option value="checkbox">Checkbox</option>
+          </select>
+
+          <label for="input-label"> Filed Label</label>
+          <input type="text" id="input-label" name="label" required />
+
+          <input type="submit" value="Add Field" />
+        </form>
+      </div>
+
+      <div class="col-2 col">
+        <h2>Form Preview</h2>
+      </div>
+    </div>
+  </body>
+</html>
